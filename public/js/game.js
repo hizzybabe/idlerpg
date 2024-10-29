@@ -330,7 +330,11 @@ let level = 1;
                         checkLevelUp();
                         updateStats();
                     } else {
-                        logAction('Health is too low for idle training.');
+                        // Automatically stop idle training
+                        idleTraining = false;
+                        clearInterval(idleTrainingInterval);
+                        document.getElementById('idle-training-toggle').textContent = 'Start Idle Training';
+                        logAction('Idle training stopped: Health is too low.');
                     }
                 }, 10000);
             } else {
