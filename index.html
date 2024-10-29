@@ -182,8 +182,12 @@
             document.getElementById("health-bar").style.width = healthPercent + "%";
             document.getElementById("exp-bar").style.width = expPercent + "%";
             
-            for (let i = 0; i < 3; i++) {
-                document.getElementById("item" + (i + 1)).innerText = inventory[i];
+            // Update all inventory slots
+            for (let i = 0; i < inventory.length; i++) {
+                const itemElement = document.getElementById("item" + (i + 1));
+                if (itemElement) {
+                    itemElement.innerText = inventory[i];
+                }
             }
             document.getElementById("character-class").innerText = characterClass;
             
