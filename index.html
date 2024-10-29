@@ -62,6 +62,27 @@
             font-size: 40px;
             border: 3px solid var(--text-color);
         }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: var(--border-color);
+            border-radius: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .health-fill {
+            background-color: #ff4444;
+        }
+
+        .exp-fill {
+            background-color: #4444ff;
+        }
     </style>
 </head>
 <body>
@@ -83,8 +104,16 @@
                 <button onclick="selectClass('Merchant')">Merchant (+2 inventory slots)</button>
             </div>
             <p>Level: <span id="level">1</span></p>
-            <p>Experience: <span id="experience">0</span> / <span id="next-level-exp">10</span></p>
-            <p>Health: <span id="health">100</span> / <span id="max-health">100</span></p>
+            <p>Experience:</p>
+            <div class="progress-bar">
+                <div id="exp-bar" class="progress-fill exp-fill" style="width: 0%"></div>
+            </div>
+            <p><span id="experience">0</span> / <span id="next-level-exp">10</span></p>
+            <p>Health:</p>
+            <div class="progress-bar">
+                <div id="health-bar" class="progress-fill health-fill" style="width: 100%"></div>
+            </div>
+            <p><span id="health">100</span> / <span id="max-health">100</span></p>
             <p>Attack: <span id="attack">5</span></p>
             <p>Defense: <span id="defense">5</span></p>
         </div>
@@ -144,6 +173,13 @@
             document.getElementById("max-health").innerText = maxHealth;
             document.getElementById("attack").innerText = atk;
             document.getElementById("defense").innerText = def;
+            
+            // Update progress bars
+            const healthPercent = (health / maxHealth) * 100;
+            const expPercent = (experience / nextLevelExp) * 100;
+            document.getElementById("health-bar").style.width = healthPercent + "%";
+            document.getElementById("exp-bar").style.width = expPercent + "%";
+            
             for (let i = 0; i < 3; i++) {
                 document.getElementById("item" + (i + 1)).innerText = inventory[i];
             }
