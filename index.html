@@ -376,6 +376,9 @@
                 characterClass = className;
                 classSelected = true;
                 
+                // Update avatar
+                updateAvatar(className);
+                
                 // Apply class bonuses
                 if (className === "Merchant") {
                     // Add 2 new inventory slots
@@ -395,6 +398,18 @@
                 logAction(`You have become a ${className}!`);
                 updateStats();
             }
+        }
+
+        function updateAvatar(className) {
+            const avatarEmoji = {
+                'Novice': '🧙',
+                'Fighter': '⚔️',
+                'Wizard': '🔮',
+                'Merchant': '💰'
+            };
+            
+            const avatar = document.querySelector('.avatar');
+            avatar.innerHTML = avatarEmoji[className] || '🧙';
         }
     </script>
 </body>
