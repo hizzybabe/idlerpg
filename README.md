@@ -62,7 +62,7 @@ A simple browser-based idle RPG game with roguelike elements, built using vanill
 1. Make sure you have Node.js 18.x or higher installed
 2. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/roguelike-rpg-idler.git
+   git clone https://github.com/hizzybabe/idlerpg.git
    ```
 3. Navigate to the project directory:
    ```bash
