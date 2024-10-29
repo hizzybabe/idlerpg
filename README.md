@@ -46,4 +46,25 @@ Feel free to submit issues and enhancement requests!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Installation
+
+1. Make sure you have Node.js 18.x or higher installed
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/roguelike-rpg-idler.git
+   ```
+3. Navigate to the project directory:
+   ```bash
+   cd roguelike-rpg-idler
+   ```
+4. Install dependencies:
+   ```bash
+   npm install
+   ```
+5. Start the server:
+   ```bash
+   npm start
+   ```
+6. Open your browser and navigate to `http://localhost:3000`
