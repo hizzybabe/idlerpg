@@ -449,6 +449,30 @@
             const avatar = document.querySelector('.avatar');
             avatar.innerHTML = avatarEmoji[className] || '🧙';
         }
+
+        let idleTraining = false;
+        let idleTrainingInterval;
+
+        function toggleIdleTraining() {
+            idleTraining = !idleTraining;
+            document.getElementById('idle-training-toggle').textContent = idleTraining ? 'Stop Idle Training' : 'Start Idle Training';
+
+            if (idleTraining) {
+                idleTrainingInterval = setInterval(() => {
+                    if (health > 10) {
+                        experience += 1;
+                        health -= 1;
+                        logAction('Idle training: Gained 1 experience and lost 1 health.');
+                        checkLevelUp();
+                        updateStats();
+                    } else {
+                        logAction('Health is too low for idle training.');
+                    }
+                }, 10000);
+            } else {
+                clearInterval(idleTrainingInterval);
+            }
+        }
     </script>
 </body>
 </html>
