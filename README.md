@@ -68,3 +68,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    npm start
    ```
 6. Open your browser and navigate to `http://localhost:3000`
+
+## Heroku Deployment
+
+1. Install the Heroku CLI
+2. Login to Heroku:
+   ```bash
+   heroku login
+   ```
+3. Create a new Heroku app:
+   ```bash
+   heroku create your-app-name
+   ```
+4. Deploy to Heroku:
+   ```bash
+   git push heroku main
+   ```
+5. Open the app:
+   ```bash
+   heroku open
+   ```
