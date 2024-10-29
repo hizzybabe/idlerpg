@@ -1,3 +1,5 @@
+![Idlerpg banner1](banner1.png)
+
 # Roguelike RPG Idler
 
 A simple browser-based idle RPG game with roguelike elements, built using vanilla HTML, CSS, and JavaScript.
@@ -85,6 +87,8 @@ Feel free to submit issues and enhancement requests!
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+![Idlerpg banner2](banner2.png)
 
 ## Roadmap
 
