@@ -85,3 +85,32 @@ Feel free to submit issues and enhancement requests!
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Roadmap
+
+Future planned features and improvements:
+
+- Items & Equipment:
+  - Additional weapon and armor sets
+  - Item tiers
+  - Item enhancement/upgrade system (TBC)
+
+- Character Classes:
+  - New classes with unique abilities
+  - Multi-class options at higher levels
+
+- Combat Features:
+  - Boss fights with special mechanics
+  - Dungeon system with multiple encounters
+
+- Progression Systems:
+  - Achievements
+  - Game session timer and statistics
+  - Daily/weekly challenges (TBC)
+
+- Character Development:
+  - Extended character attributes
+
+- Shop Improvements:
+  - Currency system
+  - Item pricing based on item tier
